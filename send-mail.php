@@ -1,9 +1,9 @@
 <?php
 
 	// site owner
-	$site_name = 'vcard HTML5 Template';
+	$site_name = 'Anushk&apos; Website';
 	$sender_domain = 'server@your-domain.com';
-	$to = 'jonhdoeeee@jonhdoe.com';
+	$to = 'anushkmittal@icloud.com';
 	
 	// contact form fields
 	$name = trim( $_POST['name'] );
