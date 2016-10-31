@@ -2,7 +2,7 @@
 
 	// site owner
 	$site_name = 'Anushk&apos; Website';
-	$sender_domain = 'server@your-domain.com';
+	//$sender_domain = 'server@your-domain.com';
 	$to = 'anushkmittal@icloud.com';
 	
 	// contact form fields
@@ -10,6 +10,9 @@
 	$email = trim( $_POST['email'] );
 	$subject = trim( $_POST['subject'] );
 	$message = trim( $_POST['message'] );
+	
+	$sender_domain = trim( $_POST['email'] );
+	//$email
 	
 	// check for error
 	$error = false;
