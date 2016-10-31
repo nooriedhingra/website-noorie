@@ -1,57 +1,83 @@
 <?php
 
-	// site owner
-	$site_name = 'Anushk&apos; Website';
-	//$sender_domain = 'server@your-domain.com';
-	$to = 'anushkmittal@icloud.com';
-	
+	// site owner infos
+	$email_to = 'anushkmittal@icloud.com';
+	$success_message = "Your message has been successfully sent.";
+	$site_name = 'Anushk Mittal';
+
 	// contact form fields
 	$name = trim( $_POST['name'] );
 	$email = trim( $_POST['email'] );
-	$subject = trim( $_POST['subject'] );
 	$message = trim( $_POST['message'] );
-	
-	$sender_domain = trim( $_POST['email'] );
-	//$email
-	
-	// check for error
-	$error = false;
-	if ( $name === "" ) { $error = true; }
-	if ( $email === "" ) { $error = true; }
-	if ( $subject === "" ) { $error = true; }
-	if ( $message === "" ) { $error = true; }
-	
-	// anti-spam check
-	// http://nfriedly.com/techblog/2009/11/how-to-build-a-spam-free-contact-forms-without-captchas/
-	// if the url field is empty 
-	if(isset($_POST['url']) && $_POST['url'] == ''){
-		 
-		 // if no error, then send mail
-		if ( $error == false )
+	$submitted = $_POST['submitted'];
+
+	// contact form submitted
+	if ( isset( $submitted ) )
+	{
+		// check for error
+		if ( $name === '' )
 		{
+			$name_empty = true;
+			$error = true;
+		}
+		elseif ( $email === '' )
+		{
+			$email_empty = true;
+			$error = true;
+		}
+		elseif ($message === '')
+		{
+			$message_empty = true;
+			$error = true;
+		}
+		// end check for error
+		
+		// error
+		if ( isset( $error ) )
+		{
+			echo '<div class="alert alert-error contact-alert"><strong>UNSUCCESS! </strong><ul>';
+			
+			if ($name_empty)
+			{
+				echo '<li>Required</li>';
+			}
+			elseif ($email_empty)
+			{
+				echo '<li>Required</li>';
+			}
+			elseif ($email_unvalid)
+			{
+				echo '<li>Please enter a valid email address</li>';
+			}
+			elseif ($message_empty)
+			{
+				echo '<li>Required</li>';
+			}
+			else
+			{
+				echo '<li>An error has occurred while sending your message. Please try again later.</li>';
+			}
+			
+			echo "</ul></div>";
+		}
+		// end error
+		
+		// no error send mail
+		if ( ! isset($error) )
+		{
+			$subject = 'Contact form message from your ' . $site_name . ' site';
+			
 			$body = "Name: $name \n\nEmail: $email \n\nMessage: $message";
 			
-			$headers = "From: " . $site_name . ' <' . $sender_domain . '> ' . "\r\n";
-			$headers .= "Reply-To: " . $name . ' <' . $email . '> ' . "\r\n";
+			$headers = 'From: ' . $name . ' <' . $email . '> ' . "\r\n" . 'Reply-To: ' . $email;
 			
-			$mail_result = mail( $to, $subject, $body, $headers );
+			mail( $email_to, $subject, $body, $headers );
 			
-			if ( $mail_result == true )
-				{ echo 'success'; }
-			else
-				{ echo 'unsuccess'; }
+			echo '<div class="alert alert-success contact-alert"><strong>SUCCESS! </strong>' . $success_message . '</div>';
 		}
-		else // not validated
-		{
-			echo 'error';
-		}
-		// end if
-		 
+		// end no error send mail
+		
 	}
-	else // BOT DETECTED - lets lie to it 
-	{
-		//echo "Thanks, We'll get back to you as soon as possible";
-		echo 'success';
-	}
+	// end contact form submitted
 	
 ?>
