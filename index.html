@@ -48,17 +48,16 @@
 
     <!-- Tennis Ball -->
     <svg class="draggable-svg" width="60" height="60" viewBox="0 0 60 60" style="left: 100px;">
-        <circle cx="30" cy="30" r="25" fill="#f1c40f"/>
-        <path d="M20,10 Q40,30 20,50" stroke="#e67e22" stroke-width="4" fill="none"/>
-        <path d="M40,10 Q20,30 40,50" stroke="#e67e22" stroke-width="4" fill="none"/>
+        <circle cx="30" cy="30" r="25" fill="#ccff00"/>
+        <path d="M15,30 Q30,15 45,30 M15,30 Q30,45 45,30" stroke="#fff" stroke-width="4" fill="none"/>
     </svg>
 
-    <!-- PlayStation Console -->
+    <!-- PS5 Controller -->
     <svg class="draggable-svg" width="60" height="60" viewBox="0 0 60 60" style="left: 200px;">
-        <rect x="15" y="10" width="30" height="40" fill="#2c3e50"/>
-        <rect x="20" y="15" width="20" height="30" fill="#ecf0f1"/>
-        <circle cx="30" cy="35" r="3" fill="#2980b9"/>
-        <rect x="25" y="45" width="10" height="5" fill="#2980b9"/>
+        <rect x="20" y="10" width="20" height="40" fill="#2c3e50" rx="5" ry="5"/>
+        <rect x="20" y="10" width="20" height="15" fill="#ecf0f1" rx="5" ry="5"/>
+        <circle cx="30" cy="45" r="3" fill="#2980b9"/>
+        <rect x="27" y="50" width="6" height="3" fill="#2980b9"/>
     </svg>
 
     <!-- JavaScript for Dragging -->
@@ -109,3 +108,8 @@
                 function setTranslate(xPos, yPos, el) {
                     el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
                 }
+            });
+        });
+    </script>
+</body>
+</html>
