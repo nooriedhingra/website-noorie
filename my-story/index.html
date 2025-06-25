@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noorie dhingra - my story</title>
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <meta property="og:site_name" content="noorie dhingra">
+    <meta property="og:title" content="noorie dhingra">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="personal website of noorie <3">
+    <meta property="og:url" content="https://noorie.me/my-story">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../footer.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 40px 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .blog-post {
+            font-size: 1rem;
+        }
+        
+        .blog-post h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .blog-post .date {
+            color: #888888;
+            margin-bottom: 40px;
+        }
+
+        .blog-post p {
+            margin-bottom: 20px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: #888888;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            color: #1a1a1a;
+        }
+
+        .post-image {
+            margin: 40px auto;
+            max-width: 200px;
+        }
+        .post-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .post-image figcaption {
+            font-size: 0.85rem;
+            color: #888888;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="/notes" class="back-link">← all notes</a>
+
+    <article class="blog-post">
+        <h1>my story</h1>
+        <p class="date">june 25, 2025</p>
+
+        <p>i'm the co-founder of shapes. we have a simple mission: interact with ai w/ your friends. shapes have already exchanged billions of messages with 30 million people, and we're lucky to be backed by the best investors and founders in the world, including lightspeed and ai grant. we're still at day 0.</p>
+        <p>i got my start when i was 12 making websites for everyone i possibly could. in no particular order, i spent most of my childhood playing chicken invaders 2, nurturing my moshi monsters, becoming an influencer on wattpad, running ux design and research for f500s, closing 6 figure deals leading growth for a startup, running tiktok campaigns for ihop, p&g, vf, and meta (one w/ shawn mendes!), and running a profitable consumer brand. by the time i graduated high school, i was working full-time and startups were my #1 obsession.</p>
+        <p>during the pandemic, i got to spend time at a bunch of startups ranging from hyperlogistics and ai deepfakes to plant-based chicken nuggets, 3d-printed jeans, and a kyc provider that onboarded el salvador to the chivo wallet.</p>
+        <p>i'm also a nyu dropout, though i met my co-founder when i attended emory. i moved to san francisco in january 2023.</p>
+        
+        <figure class="post-image">
+            <img src="../photo.jpeg" alt="me and anushk my friend-turned-cofounder">
+            <figcaption>me and my bestie + cofounder</figcaption>
+        </figure>
+
+        <p>i'm a lifelong eagles and sixers fan. i semi-regularly play tennis and try to go to the gurdwara 3x a month.</p>
+        <p>i learn something new every day about making software, building a team, and growing a business. i'm going to be working on shapes for the next 55+ years and am deeply inspired by the work done by roblox and nintendo.</p>
+    </article>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html> 
