@@ -1,34 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noorie dhingra</title>
+    <link rel="icon" href="favicon.png" type="image/png">
     <meta property="og:site_name" content="noorie dhingra">
     <meta property="og:title" content="noorie dhingra">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="personal website of noorie <3">
+    <meta property="og:description" content="feel free to connect me directly. im 484-624-7010">
     <meta property="og:url" content="https://noorie.me">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://noorie.me/photo.jpeg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@nooriedhingra">
+    <meta name="twitter:title" content="noorie dhingra">
+    <meta name="twitter:description" content="feel free to connect me directly. im 484-624-7010">
+    <meta name="twitter:image" content="https://noorie.me/photo.jpeg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
+    
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.5;
+            padding: 40px 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2d5a3d, #4a7c59, #6b8e5a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #666666;
+            margin-bottom: 18px;
+        }
+
         .content {
-            margin-left: 10px;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            margin-bottom: 9px;
         }
 
-        .space {
-            padding-left: 5px;
-            max-width: 1000px;
-            padding-right: 5px;
+        .content p {
+            margin-bottom: 18px;
         }
 
-        .draggable-svg {
-            position: absolute;
-            cursor: move;
+        a {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: currentColor;
+            text-underline-offset: 3px;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        .highlight {
+            color: #556b2f;
+        }
+
+        .accent-orange {
+            color: #cd853f;
+        }
+
+        .accent-yellow {
+            color: #daa520;
+        }
+
+        .accent-blue {
+            color: #708090;
+        }
+
+        .shapes-pink {
+            color: #FE9CE7;
+        }
+        .lightspeed-gold {
+            color: #f2b800;
+        }
+        .ai-grant-blue {
+            color: #58a6ff;
+        }
+
+        .hiring-green {
+            color: black;
+            text-decoration: underline;
+        }
+        
+        .nyu-purple {
+            color: #57068c;
+        }
+
+        .eagles-green {
+            color: #004C54;
+        }
+        
+        .sixers-blue {
+            color: #006BB6;
+        }
+
+        .location-section {
+            margin: 5px 0 0 0;
+            font-size: 0.9rem;
+            color: #888888;
+            padding-bottom: 10px;
+        }
+
+        .location-list {
+            margin-bottom: 15px;
+        }
+
+        .location-item {
+            color: #888888;
+        }
+
+        .location-current {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 30px 20px;
+            }
+            
+            .name {
+                font-size: 2.2rem;
+            }
+
+            .content {
+                font-size: 0.75rem;
+            }
+        }
+
+        .accent-orange a {
+            color: #cd853f;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <p> long story short: i'm a kid. grew up on moshi monsters and wattpad. went to 2 unis, none stuck. </p>
-    <p> today, i'm co-founder of <a href="https://shapes.inc"> shapes inc</a> -- general purpose social agents. </p>
-    <p> @noorie on discord. based in san francisco. </p>
-    <br> 🧦 <a href="AICA-Proposal878.pdf" download> AICA proposal</a>. </p>
+    <div class="header">
+        <h1 class="name">noorie dhingra</h1>
+        <p class="subtitle">working hard and having fun :)</p>
+    </div>
 
+    <div class="content">
+        <p>i'm the co-founder of <a href="https://shapes.inc" class="shapes-pink" target="_blank" rel="noopener noreferrer">Shapes</a>, where 30 million people interact with ai alongside their friends. we're supported by world-class investors like <span class="lightspeed-gold">Lightspeed</span> and <span class="ai-grant-blue">AI Grant</span>. <a href="https://shapes.inc/jobs" target="_blank" rel="noopener noreferrer" class="hiring-green">join us to bring shapes to the next 300 million people</a>.</p>
+        
+        <p>i got my start when i was 12 making websites for everyone i possibly could. in no particular order, i spent most of my childhood: playing chicken invaders 2 + moshi monsters, becoming an influencer on wattpad, growth hacking communities to 200K+ followers and 50m+ views <a href="/my-story">[cont'd]</a></p>
+        <p>i'm also a <span class="nyu-purple">NYU</span> dropout, though i met my co-founder when i attended Emory. i moved to san francisco in january 2023.</p>
+        <p>i'm a lifelong <span class="eagles-green">Eagles</span> and <span class="sixers-blue">Sixers</span> fan. i semi-regularly play tennis and try to go to the gurdwara 3x a month.</p>
+        <p>i learn something new every day. i'm going to be working on Shapes for the next 55+ years and am deeply inspired by the work done by Roblox and Nintendo.</p>
+        
+        <p>🧦 <a href="AICA-Proposal878.pdf" download="" class="accent-orange">AICA proposal</a>.</p>
+    </div>
+
+    <div class="location-section">
+        <div class="location-list">
+            <span class="location-item">Philadelphia</span> / <span class="location-item">Atlanta</span> / <span class="location-item">New York City</span> / <span class="location-current">San Francisco</span>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
